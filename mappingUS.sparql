@@ -1,0 +1,26 @@
+PREFIX ex: <http://ex.org/a#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?URI a ex:Youtube;
+    ex:video_id ?video_id;
+    ex:title ?title;
+    ex:publishedAt ?publishedAt;
+    ex:channelId ?channelId;
+    ex:channelTitle ?channelTitle;
+    ex:categoryId ?categoryId;
+    ex:trending_date ?trending_date;
+    ex:tags ?tags;
+    ex:view_count ?view_count;
+    ex:likes ?likes;
+    ex:dislikes ?dislikes; 
+    ex:comment_count ?comment_count;
+    ex:thumbnail_link ?thumbnail_link;
+    ex:comments_disabled ?comments_disabled; 
+    ex:ratings_disabled ?ratings_disabled;
+    ex:description ?description;
+} 
+FROM <file:USYoutubeTrendingData.csv> 
+WHERE {
+  BIND (URI(CONCAT('http://ex.org/youtubers/', ENCODE_FOR_URI(?video_id))) AS ?URI)
+}

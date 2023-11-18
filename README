@@ -23,3 +23,7 @@ To mapping: sh bin/tarql --ntriples PATH/mappingMost.sparql PATH/MostSubscribedY
 Global YouTube Statistics 2023
 Source: https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023
 To mapìng: sh bin/tarql --ntriples PATH/mappingGlobal.sparql PATH//GlobalYouTubeStatistics.csv
+
+YouTube Trending Video Dataset (updated daily)
+Source: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=DE_youtube_trending_data.csv
+To mapping: sh bin/tarql --ntriples PATH/mappingUS.sparql PATH/USYoutubeTrendingData.csv
