@@ -27,3 +27,4 @@ To mapìng: sh bin/tarql --ntriples PATH/mappingGlobal.sparql PATH//GlobalYouTub
 YouTube Trending Video Dataset (updated daily)
 Source: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=DE_youtube_trending_data.csv
 To mapping: sh bin/tarql --ntriples PATH/mappingUS.sparql PATH/USYoutubeTrendingData.csv
+ttl(cause > 100MB): https://drive.google.com/file/d/13T55LARtAxQ9SmvA0Ti7IPgVZbZAvdCZ/view?usp=share_link
