@@ -1,0 +1,25 @@
+Using tarql
+# Tarql: SPARQL for Tables
+
+Tarql is a command-line tool for converting CSV files to RDF using SPARQL 1.1 syntax. It's written in Java and based on Apache ARQ.
+
+**See http://tarql.github.io/ for documentation.**
+
+## Building
+
+Get the code from GitHub: http://github.com/tarql/tarql
+
+Tarql uses Maven. To create executable scripts for Windows and Unix in `/target/appassembler/bin/tarql`:
+
+    mvn package appassembler:assemble
+
+Otherwise it's standard Maven.
+
+# Datasets
+Most Subscribed YouTube Channels
+Source: https://www.kaggle.com/datasets/surajjha101/top-youtube-channels-data
+To mapping: sh bin/tarql --ntriples PATH/mappingMost.sparql PATH/MostSubscribedYoutubeChannels.csv
+
+Global YouTube Statistics 2023
+Source: https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023
+To mapìng: sh bin/tarql --ntriples PATH/mappingGlobal.sparql PATH//GlobalYouTubeStatistics.csv

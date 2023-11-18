@@ -1,0 +1,40 @@
+PREFIX ex: <http://ex.org/a#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?URI a ex:Youtube;
+    ex:rank ?rank;
+    ex:Youtuber ?Youtuber;
+    ex:subscribers ?subscribers;
+    ex:videoViews ?videoViews;
+    ex:category ?category;
+    ex:Title ?Title;
+    ex:uploads ?uploads;
+    ex:Country ?Country;
+    ex:Abbreviation ?Abbreviation;
+    ex:channel_type ?channel_type;
+    ex:video_views_rank ?video_views_rank;
+    ex:country_rank ?country_rank;
+    ex:channel_type_rank ?channel_type_rank;
+    ex:video_views_for_the_last_30_days ?video_views_for_the_last_30_days;
+    ex:lowest_monthly_earnings ?lowest_monthly_earnings;
+    ex:highest_monthly_earnings ?highest_monthly_earnings;
+    ex:lowest_yearly_earnings ?lowest_yearly_earnings;
+    ex:highest_yearly_earnings ?highest_yearly_earnings;
+    ex:subscribers_for_last_30_days ?subscribers_for_last_30_days;
+    ex:created_year ?created_year;
+    ex:created_month ?created_month;
+    ex:created_date ?created_date;
+    ex:Gross_tertiary_education_enrollment ?Gross_tertiary_education_enrollment;
+    ex:Population ?Population;
+    ex:Unemployment_rate ?Unemployment_rate;
+    ex:Urban_population ?Urban_population;
+    ex:Latitude ?Latitude;
+    ex:Longitude ?Longitude;
+} 
+FROM <file:GlobalYouTubeStatistics.csv> 
+WHERE {
+  #BIND (URI(CONCAT('http://ex.org/youtubers/', ?Youtuber)) AS ?URI)
+  #BIND (URI(CONCAT('http://ex.org/youtubers/', REPLACE(?Youtuber, " ", "_"))) AS ?URI)
+  BIND (URI(CONCAT('http://ex.org/youtubers/', ENCODE_FOR_URI(?Youtuber))) AS ?URI)
+}

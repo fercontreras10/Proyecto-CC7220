@@ -1,0 +1,19 @@
+PREFIX ex: <http://ex.org/a#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?URI a ex:Youtube;
+    ex:rank ?rank;
+    ex:Youtuber ?Youtuber;
+    ex:subscribers ?subscribers;
+    ex:videoViews ?videoViews;
+    ex:videoCount ?videoCount;
+    ex:category ?category;
+    ex:started ?started;
+} 
+FROM <file:MostSubscribedYoutubeChannels.csv> 
+WHERE {
+  #BIND (URI(CONCAT('http://ex.org/youtubers/', ?Youtuber)) AS ?URI)
+  #BIND (URI(CONCAT('http://ex.org/youtubers/', REPLACE(?Youtuber, " ", "_"))) AS ?URI)
+  BIND (URI(CONCAT('http://ex.org/youtubers/', ENCODE_FOR_URI(?Youtuber))) AS ?URI)
+}
