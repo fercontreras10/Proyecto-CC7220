@@ -16,6 +16,5 @@ SELECT ?canal ?rank (COUNT(DISTINCT ?video) AS ?count) WHERE {
 GROUP BY ?canal 
 ORDER BY DESC(?count)
 """
-#g.query(query)
 for r in g.query(query):
     print(r["canal"] + " " + r["rank"] + " " + r["count"])
