@@ -17,6 +17,5 @@ OPTIONAL {
 FILTER (!BOUND(?canalndos))
 }
 """
-#g.query(query)
 for r in g.query(query):
     print( r["canaln"])
