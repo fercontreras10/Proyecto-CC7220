@@ -15,6 +15,7 @@ SELECT ?canaln (MAX(xsd:integer(?visitas)) AS ?visitasdos) WHERE {
 ?videos <http://ex.org/a#view_count> ?visitas .
 }
 GROUP BY ?canaln 
+ORDER BY DESC(?visitasdos)
 """
 for r in g.query(query):
     print( r["canaln"] +  " " + r["visitasdos"])
