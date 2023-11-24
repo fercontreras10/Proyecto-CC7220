@@ -22,6 +22,5 @@ UNION
 GROUP BY ?cat ?an
 ORDER BY DESC(?count)
 """
-#g.query(query)
 for r in g.query(query):
     print( r["cat"] + " " + r["an"] + " " + r["count"])
