@@ -18,7 +18,7 @@ Tarql uses Maven. To create executable scripts for Windows and Unix in `/target/
 
 Otherwise it's standard Maven.
 
-## Queries
+## Queryes
 
 The querys where done by using rdflib (https://rdflib.readthedocs.io/en/stable/) on python 3.10
 
