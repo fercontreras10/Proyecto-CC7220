@@ -19,18 +19,18 @@ Tarql uses Maven. To create executable scripts for Windows and Unix in `/target/
 Otherwise it's standard Maven.
 
 # Datasets
-Most Subscribed YouTube Channels
-Source: https://www.kaggle.com/datasets/surajjha101/top-youtube-channels-data
+Most Subscribed YouTube Channels <br/>
+Source: https://www.kaggle.com/datasets/surajjha101/top-youtube-channels-data <br/>
 To mapping: sh bin/tarql --ntriples PATH/mappingMost.sparql PATH/MostSubscribedYoutubeChannels.csv
 
-Global YouTube Statistics 2023
-Source: https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023
+Global YouTube Statistics 2023 <br/>
+Source: https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023 <br/>
 To mapìng: sh bin/tarql --ntriples PATH/mappingGlobal.sparql PATH//GlobalYouTubeStatistics.csv
 
-YouTube Trending Video Dataset (updated daily) (only US)
-Source: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=DE_youtube_trending_data.csv
-To mapping: sh bin/tarql --ntriples PATH/mappingUS.sparql PATH/USYoutubeTrendingData.csv
+YouTube Trending Video Dataset (updated daily) (only US) <br/>
+Source: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=DE_youtube_trending_data.csv <br/>
+To mapping: sh bin/tarql --ntriples PATH/mappingUS.sparql PATH/USYoutubeTrendingData.csv <br/>
 ttl(cause > 100MB): https://drive.google.com/file/d/13T55LARtAxQ9SmvA0Ti7IPgVZbZAvdCZ/view?usp=share_link
 
-Used dataset (US + most)
+Used dataset (US + most) <br/>
 xd.ttl(cause > 100MB): https://drive.google.com/file/d/1ggoG_qhAiovrFVlPJb29LwyUBNP8UMlO/view?usp=sharing
