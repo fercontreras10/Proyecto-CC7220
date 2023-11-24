@@ -18,14 +18,14 @@ Tarql uses Maven. To create executable scripts for Windows and Unix in `/target/
 
 Otherwise it's standard Maven.
 
+## Queries
+
+The querys where done by using rdflib (https://rdflib.readthedocs.io/en/stable/) on python 3.10
+
 # Datasets
 Most Subscribed YouTube Channels <br/>
 Source: https://www.kaggle.com/datasets/surajjha101/top-youtube-channels-data <br/>
 To mapping: sh bin/tarql --ntriples PATH/mappingMost.sparql PATH/MostSubscribedYoutubeChannels.csv
-
-Global YouTube Statistics 2023 <br/>
-Source: https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023 <br/>
-To mapìng: sh bin/tarql --ntriples PATH/mappingGlobal.sparql PATH//GlobalYouTubeStatistics.csv
 
 YouTube Trending Video Dataset (updated daily) (only US) <br/>
 Source: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=DE_youtube_trending_data.csv <br/>
